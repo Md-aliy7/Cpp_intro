@@ -1,11 +1,4 @@
 /*
-In this course, for all lectures we create only one project.
-We will have several source files, but only one is used at once.
-Each source file executes a C++ program and has explanations for a new C++ topic.
-A link is attached in each source file for detailed explanation for that topic.
-We open the project from .sln solution file while we build or run the source file.
-Other files in the project are created automatically.
-Clean solution for any previous source before building a new source solution.
 Topic 1:
 https://cplusplus.com/doc/tutorial/introduction/
 https://cplusplus.com/doc/tutorial/program_structure/
