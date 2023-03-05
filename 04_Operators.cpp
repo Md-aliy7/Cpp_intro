@@ -55,12 +55,11 @@ comparison operator (==) compares whether the values on both sides of the operat
 !true       // evaluates to false
 ( (5 == 5) && (3 > 6) )  // evaluates to false ( true && false )
 ( (5 == 5) || (3 > 6) )  // evaluates to true ( true || false )
-_________________________________________________________________________________________________
-operator:	short-circuit																		 |
-&&:	if the left-hand side expression is false, the right-hand side expression is never evaluated.|
-||:	if the left-hand side expression is true, the right-hand side expression is never evaluated. |
-(not evaluated means not executed)																 |
--------------------------------------------------------------------------------------------------
+
+operator:	short-circuit
+&&      :	if the left-hand side expression is false, the right-hand side expression is never evaluated.
+||      :	if the left-hand side expression is true, the right-hand side expression is never evaluated.
+(not evaluated means not executed)
 
 7- Conditional ternary operator ( ? ):
 If condition is true, the entire expression evaluates to result1, and otherwise to result2.
