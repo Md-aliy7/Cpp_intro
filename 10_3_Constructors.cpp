@@ -7,14 +7,14 @@ https://cplusplus.com/doc/tutorial/classes2/
 Special member functions are member functions that are implicitly defined as
 member of classes under certain circumstances. There are six:
 _________________________________________________________
-Member function			|	typical form for class C:	|
+Member function		|typical form for class C	|
 =========================================================
-Default constructor		|	C::C();						|
-Destructor				|	C::~C();					|
-Copy constructor		|	C::C (const C&);			|
-Copy assignment			|	C& operator= (const C&);	|
-Move constructor		|	C::C (C&&);					|
-Move assignment			|	C& operator= (C&&);			|
+Default constructor	|	C::C();			|
+Destructor		|	C::~C();		|
+Copy constructor	|	C::C (const C&);	|
+Copy assignment		|	C& operator= (const C&);|
+Move constructor	|	C::C (C&&);		|
+Move assignment		|	C& operator= (C&&);	|
 ---------------------------------------------------------
 
 1) Default constructor:	(notice exapmles of previous sections)
