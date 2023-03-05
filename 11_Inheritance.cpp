@@ -37,7 +37,7 @@ Access                      |  public   |  protected    |   private |
 =====================================================================
 members of the same class   |    yes    |    yes        |    yes    |
 members of derived class    |    yes    |    yes        |    no     |
-not members	(objects)       |    yes    |    no         |    no     |
+not members (objects)       |    yes    |    no         |    no     |
 ---------------------------------------------------------------------
 A publicly derived class inherits access to every member of a base class except:
 - its constructors and its destructor 
