@@ -29,12 +29,12 @@ price *= units + 1;		price = price * (units+1);
 4- Increment and decrement (++, --):
 ++x; (the same as) x+=1; (the same as) x=x+1;
 --x; (the same as) x-=1; (the same as) x=x-1;
-_____________________________________________________________________________
-		Example (1)					|		Example (2)						|
-x = 3;								|		x = 3;							|
-y = ++x;							|		y = x++;						|
-// x contains 4, y contains 4		|		// x contains 4, y contains 3	|
------------------------------------------------------------------------------
+_________________________________________________________________________________
+Example (1)				|		Example (2)		|
+x = 3;					|		x = 3;			|
+y = ++x;				|		y = x++;		|
+result: x contains 4, y contains 4	| result: x contains 4, y contains 3	|
+---------------------------------------------------------------------------------
 Example (1): (++x), the expression evaluates to the final value of x, once it is already increased.
 Example (2): (x++), the expression evaluates to the value that x had before being increased.
 
