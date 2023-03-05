@@ -18,9 +18,9 @@ Example: (replace @ by the operator in each case)
 _________________________________________________________________________________________
 Expression	 |  Operator	         |    Member function	      |  Non-member function |
 @a	         |  + - * & ! ~ ++ --	 |    A::operator@()	      |  operator@(A)        |
-a@	         |  ++ --	             |    A::operator@(int)	      |  operator@(A,int)    |
+a@	         |  ++ --	         |    A::operator@(int)	      |  operator@(A,int)    |
 a@b	         |  + - * / %            |    A::operator@(B)	      |  operator@(A,B)      |
-a@b	         |  = += -= *= /=	     |    A::operator@(B)	      |      -               |
+a@b	         |  = += -= *= /=	 |    A::operator@(B)	      |      -               |
 -----------------------------------------------------------------------------------------
 Where a is an object of class A, b is an object of class B.
 
