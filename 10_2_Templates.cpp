@@ -15,13 +15,13 @@ type operator sign (parameters) {... definition ... }
 Notice that some operators may be overloaded in two forms: either as a member function or
 as a non-member function. (detailed in the reference)
 Example: (replace @ by the operator in each case)
-___________________________________________________________________________________________
+_______________________________________________________________________________________________
 Expression	 |  Operator	         |    Member function	      |  Non-member function |
 @a	         |  + - * & ! ~ ++ --	 |    A::operator@()	      |  operator@(A)        |
 a@	         |  ++ --	         |    A::operator@(int)	      |  operator@(A,int)    |
 a@b	         |  + - * / %            |    A::operator@(B)	      |  operator@(A,B)      |
 a@b	         |  = += -= *= /=	 |    A::operator@(B)	      |      -               |
--------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 Where a is an object of class A, b is an object of class B.
 
 -) The keyword 'this'
