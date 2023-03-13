@@ -216,7 +216,7 @@ cout << "...................... Destructor ........................" << endl;
     Copy_object object4;
     object4 = object3;  // copy assignment required
     cout << "object3's content: " << object3.content() << '\n';
-    cout << "object3's content: " << object3.content() << '\n';
+    cout << "object4's content: " << object4.content() << '\n';
     cout << "Original number1: " << object3.number1 << endl;
     cout << "Deep copy for number2: " << object4.number2 << endl;
     cout << "Original number2: " << object3.number2 << endl;
