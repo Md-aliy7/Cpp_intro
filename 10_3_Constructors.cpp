@@ -206,25 +206,25 @@ int main() {
     cout << "Deep copy for number1: " << object2.number1 << endl;
     cout << "Original number2: " << object1.number2 << endl;
     cout << "No deep copy for number2: " << object2.number2 << endl;
-    cout << "object1 address" << object1.object_address() << endl;
+    cout << "object1 address: " << object1.object_address() << endl;
     //A non-const function, not accessed by a const object.
-    cout << "object1 content address" << object1.content_adreess() << endl;
-    cout << "object2 adreess is taken by deep copy: " << object2.content_adreess() << endl;
+    cout << "object1 content address: " << object1.content_adreess() << endl;
+    cout << "object2 content adreess is taken by deep copy: " << object2.content_adreess() << endl;
 
     cout << "...................... Copy assignment ........................" << endl;
     Copy_object object3("New Example", 54);
     Copy_object object4;
-    object4 = object3;  // copy assignment required
+    object4.operator=(object3);  // copy assignment required
     cout << "object3's content: " << object3.content() << '\n';
     cout << "object4's content: " << object4.content() << '\n';
     cout << "Original number1: " << object3.number1 << endl;
     cout << "Deep copy for number2: " << object4.number2 << endl;
     cout << "Original number2: " << object3.number2 << endl;
     cout << "No deep copy for number1: " << object2.number1 << endl;
-    cout << "object3 address" << object3.object_address() << endl;
-    cout << "object4 address" << object4.object_address() << endl;
-    cout << "object3 content address" << object3.content_adreess() << endl;
-    cout << "object4 content adreess is taken by deep copy: " << object4.content_adreess() << endl;
+    cout << "object3 address: " << object3.object_address() << endl;
+    cout << "object4 address: " << object4.object_address() << endl;
+    cout << "object3 content address: " << object3.content_adreess() << endl;
+    cout << "object4 content adreess: " << object4.content_adreess() << endl;
 
     cout << "...................... Move constructor ........................" << endl;
     // This moving only happens when the source is an unnamed object.
