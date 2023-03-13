@@ -121,7 +121,7 @@ public:
         delete ptr; // to garantee freeing any used memory (the only diff. from copy constructor)
         ptr = new string;
         *ptr = assigned_object.content();     // deep copy required
-        number1 = assigned_object.number1;    // deep copy required
+        number2 = assigned_object.number2;    // deep copy required
         return *this;
     }
 };
@@ -211,16 +211,16 @@ cout << "...................... Destructor ........................" << endl;
     cout << "object1 address" << object1.adreess_a() << endl;
     cout << "object2 adreess is taken by deep copy: " << object2.adreess_a() << endl;
 
-cout << "...................... Copy assignment ........................" << endl;
+    cout << "...................... Copy assignment ........................" << endl;
     Copy_object object3("New Example", 54);
     Copy_object object4;
     object4 = object3;  // copy assignment required
     cout << "object3's content: " << object3.content() << '\n';
     cout << "object3's content: " << object3.content() << '\n';
     cout << "Original number1: " << object3.number1 << endl;
-    cout << "Deep copy for number2: " << object4.number1 << endl;
-    cout << "Original number1: " << object3.number2 << endl;
-    cout << "No deep copy for number2: " << object2.number2 << endl;
+    cout << "Deep copy for number2: " << object4.number2 << endl;
+    cout << "Original number2: " << object3.number2 << endl;
+    cout << "No deep copy for number1: " << object2.number1 << endl;
     cout << "object3 address" << object3.address() << endl;
     cout << "object4 address" << object4.address() << endl;
     cout << "object3 address" << object3.adreess_a() << endl;
