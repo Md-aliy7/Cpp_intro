@@ -197,14 +197,14 @@ cout << "...................... Destructor ........................" << endl;
     cout << "summary1's address: "; summary1.address();
     cout << "summary2's address: "; summary2.address();
 
-cout << "...................... Copy constructor ........................" << endl;
+    cout << "...................... Copy constructor ........................" << endl;
     Copy_object object1("Example", 15);
     const Copy_object object2 = object1;
     cout << "object1's content: " << object1.content() << '\n';
     cout << "object2's content: " << object2.content() << '\n';
     cout << "Original number1: " << object1.number1 << endl;
-    cout << "Deep copy for number2: " << object2.number1 << endl;
-    cout << "Original number1: " << object1.number2 << endl;
+    cout << "Deep copy for number1: " << object2.number1 << endl;
+    cout << "Original number2: " << object1.number2 << endl;
     cout << "No deep copy for number2: " << object2.number2 << endl;
     cout << "object1 address" << object1.address() << endl;
     // object2.address();   //non-const function, not accessed by a const object.
