@@ -32,6 +32,7 @@ Destructor is responsible for the necessary cleanup needed by a class when its o
 It is useful when a class allocates dynamic memory to store some data with 'new' keyword.
 A destructor is a member function called automatically at the end of the object's life, in charge of
 releasing an allocated memory. it takes no arguments and returns nothing, not even void.
+We explicitly define the destructor to release the manually allocated memory with 'new' keyword.
 
 Syntax as a defined member within a class C:
 ~C() { delete memory_ptr; }
