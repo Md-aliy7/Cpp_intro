@@ -21,7 +21,7 @@ Move assignment		|	C& operator= (C&&);	|
 The default constructor is the constructor called when objects of a class are declared, but
 are not initialized with any arguments (no private or protected members need to be initialized).
 If a class definition has no constructors, the compiler assumes the class to have an implicitly
-defined default constructor. 
+defined default constructor.
 But when we need to initialize private or protected data members of the class, the constructor
 must be explicitly declared with parameters. In this case, the compiler no longer provides an
 implicit default constructor, and no longer allows the declaration of new objects of that class
@@ -47,7 +47,7 @@ Copy constructor syntax as a defined member within a class C:
 C(C&) { ... definiton_with_deep_copy ... }
 
 Copy assignment syntax as a defined member within a class C:
-C operator= (const C& assigned_object) { ... definiton_with_deep_copy ... }  
+C operator= (const C& assigned_object) { ... definiton_with_deep_copy ... }
 
 5,6) Move constructor and assignment:
 Similar to copying, moving also uses the value of an object to set the value to another object.
@@ -96,7 +96,7 @@ class Copy_object {
 public:
     int number1;
     int number2;
-    Copy_object(){}
+    Copy_object() {}
     Copy_object(const string& str, int rank) {
         ptr = new string;
         *ptr = str;
@@ -113,8 +113,8 @@ public:
     }
     // access content:
     const string& content() const { return *ptr; }
-    auto adreess_a() const { return ptr; }
-    auto address() { return ptr; }
+    auto content_adreess() const { return ptr; }
+    auto object_address() { return this; }
 
     // Copy assignment:
     Copy_object operator= (const Copy_object& assigned_object) {
@@ -153,14 +153,14 @@ public:
     auto address() { return ptr; }
 
     // Move constructor:
-    move_object (move_object&& source_object) {
+    move_object(move_object&& source_object) {
         ptr = source_object.ptr;    // move pointer
         ptr2 = source_object.ptr2;
-// After moving pointers from the source_object, delete them to release more memory
+        // After moving pointers from the source_object, delete them to release more memory
         source_object.ptr = nullptr;
         source_object.ptr2 = nullptr;
-    
-}
+
+    }
 
     // Move assignment:
     move_object& operator= (move_object&& source_object) {
@@ -172,24 +172,24 @@ public:
         source_object.ptr2 = nullptr;
         return *this;
     }
-// addition:   (return type from addition must agree with the move assignment parameter type)
+    // addition:   (return type from addition must agree with the move assignment parameter type)
     move_object operator+ (move_object& rhs) {
         rhs.number2 = number2 + rhs.number2;
-        rhs.number1 = 2*(number1 + rhs.number1);
+        rhs.number1 = 2 * (number1 + rhs.number1);
         return move_object((content() + " and " + rhs.content()));
     }
-// subtaction:  (return type from subtaction must agree with the move assignment parameter type)
+    // subtaction:  (return type from subtaction must agree with the move assignment parameter type)
     move_object operator- (move_object& rhs) {
         int subtract = number2 - rhs.number2;
         number2 = subtract;
-        number1 = 0.5* subtract;
+        number1 = 0.5 * subtract;
         return move_object(content(), rhs.number2);
     }
 };
 
 int main() {
 
-cout << "...................... Destructor ........................" << endl;
+    cout << "...................... Destructor ........................" << endl;
     Paragraph summary1;
     Paragraph summary2("Examples are given individually for each section");
     cout << "summary1's content: " << summary1.content() << '\n';
@@ -206,10 +206,10 @@ cout << "...................... Destructor ........................" << endl;
     cout << "Deep copy for number1: " << object2.number1 << endl;
     cout << "Original number2: " << object1.number2 << endl;
     cout << "No deep copy for number2: " << object2.number2 << endl;
-    cout << "object1 address" << object1.address() << endl;
-    // object2.address();   //non-const function, not accessed by a const object.
-    cout << "object1 address" << object1.adreess_a() << endl;
-    cout << "object2 adreess is taken by deep copy: " << object2.adreess_a() << endl;
+    cout << "object1 address" << object1.object_address() << endl;
+    //A non-const function, not accessed by a const object.
+    cout << "object1 content address" << object1.content_adreess() << endl;
+    cout << "object2 adreess is taken by deep copy: " << object2.content_adreess() << endl;
 
     cout << "...................... Copy assignment ........................" << endl;
     Copy_object object3("New Example", 54);
@@ -221,12 +221,12 @@ cout << "...................... Destructor ........................" << endl;
     cout << "Deep copy for number2: " << object4.number2 << endl;
     cout << "Original number2: " << object3.number2 << endl;
     cout << "No deep copy for number1: " << object2.number1 << endl;
-    cout << "object3 address" << object3.address() << endl;
-    cout << "object4 address" << object4.address() << endl;
-    cout << "object3 address" << object3.adreess_a() << endl;
-    cout << "object4 adreess is taken by deep copy: " << object4.adreess_a() << endl;
+    cout << "object3 address" << object3.object_address() << endl;
+    cout << "object4 address" << object4.object_address() << endl;
+    cout << "object3 content address" << object3.content_adreess() << endl;
+    cout << "object4 content adreess is taken by deep copy: " << object4.content_adreess() << endl;
 
-cout << "...................... Move constructor ........................" << endl;
+    cout << "...................... Move constructor ........................" << endl;
     // This moving only happens when the source is an unnamed object.
     const move_object object5 = move_object("unnamed object", 159);
     cout << "object5's content: " << object5.content() << '\n';
@@ -234,8 +234,8 @@ cout << "...................... Move constructor ........................" << en
     cout << "object5 adreess is a: " << object5.adreess_a() << endl;
     cout << "object5.number2: " << object5.number2 << endl;
 
-cout << "...................... Move assignment ........................" << endl;
-    move_object object6 ("move1 object", 987);
+    cout << "...................... Move assignment ........................" << endl;
+    move_object object6("move1 object", 987);
     move_object object7("move2 object", 123);
     cout << "object7's content: " << object7.content() << '\n';
     cout << "object7.number1: " << object7.number1 << '\n';
@@ -253,5 +253,5 @@ cout << "...................... Move assignment ........................" << end
     cout << "new object8.number1: " << object8.number1 << '\n';
     cout << "new object8.number2: " << object8.number2 << '\n';
 
-	return 0;
+    return 0;
 }
