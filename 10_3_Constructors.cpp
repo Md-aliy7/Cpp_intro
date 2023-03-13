@@ -40,7 +40,7 @@ Syntax as a defined member within a class C:
 3,4) Copy constructor and assignment:
 A copy constructor is a constructor whose first parameter is of type (Class_name&) and which can be
 invoked with a single argument of this type.
-Objects also be copied on any assignment operation, the result is like copying on construction.
+Objects can also be copied on any assignment operation, the result is like copying on construction.
 Note: Here, a copy of the passed object is created with a unique memory.
 
 Copy constructor syntax as a defined member within a class C:
