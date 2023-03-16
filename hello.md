@@ -4,7 +4,7 @@ https://cplusplus.com/doc/tutorial/program_structure/
 */
 
 /*
-What is a compiler?
+What is a compiler?\n
 Computers understand only one language and that language consists of sets of instructions made
 of ones and zeros (called machine language). Because a computer can only understand machine language
 and humans wish to write in high level languages, high level languages have to be re-written (translated)
