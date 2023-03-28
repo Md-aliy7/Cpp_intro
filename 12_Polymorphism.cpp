@@ -26,7 +26,7 @@ pure virtual function (virtual function with replacing its definition by (=0)).
 
 -) Syntax for a pure virtual function:  virtual type func_name (params|void) = 0;
 
-An Abstract base class can't be used to instantiate (i.e., create) objects, but it can be used to create
+An Abstract base class can't be used to instantiate objects, but it can be used to create
 pointers - to objects of derived (non-abstract) classes - which can be dereferenced.
 */
 
