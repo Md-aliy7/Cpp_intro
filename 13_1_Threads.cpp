@@ -156,7 +156,7 @@ int main() {
 		this_thread::sleep_for(0.8s);
 
 	}
-	cout << "The main thread waites for the out threads to finishes executing.\n";
+	cout << "The main thread waites for the out threads to finish executing.\n";
 	out_thread3.join();
 	out_thread4.join();
 	
