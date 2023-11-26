@@ -17,7 +17,7 @@ with a semicolon (;) - or a compound statement.
 
 1- Selection statements: if and else:
 	if (condition) simple_statement1; or {compound_statement1} 
-	else if simple_statement2; or {compound_statement2} 
+	else if (condition) simple_statement2; or {compound_statement2} 
 	else simple_statement3; or {compound_statement3} 
 2- Iteration statements (loops):
 	a) while (condition) statement; or {compound_statement}
