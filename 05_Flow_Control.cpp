@@ -168,7 +168,7 @@ int main() {
 		if (name == "Ali") break;
 		cout << name << "\t";
 	}
-	cout << "Do you want to a new name? Y | N \n";
+	cout << "Do you want to add a new name? Y | N \n";
 	char answer;
 	cin >> answer;
 	if (answer == 'Y' || answer == 'y') {
