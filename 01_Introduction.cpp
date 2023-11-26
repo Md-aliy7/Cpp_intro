@@ -74,7 +74,7 @@ You might misspell #include or use // insted of #.
 int main() {
 	int favourite_number;
 	std::cout << "Hello World from C++\n";
-	std::cout << "Enter your favourite number between and 100:  ";
+	std::cout << "Enter your favourite number between 0 and 100:  ";
 	std::cin >> favourite_number;
 	// What is entered by the user is inserted into (i.e. >>) favourite_number.
 	std::cout << favourite_number << " is my favourite number too!" << std::endl;
