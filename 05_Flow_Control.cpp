@@ -127,7 +127,7 @@ int main() {
 	cout << "number 5 is " << ((5 % 2 == 0) ? "even" : "odd") << endl;
 
 	int num1{}, num2{};
-	cout << "Enter two inteeger numbers seperated by a space:\n";
+	cout << "Enter two integer numbers seperated by a space:\n";
 	cin >> num1 >> num2;
 
 	if (num1 < num2);	//  With this condition true, nothing is done with its if-statement.
