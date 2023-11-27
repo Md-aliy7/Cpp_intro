@@ -123,7 +123,7 @@ int main() {
 	string s6{ "aapplllee" };
 	string s7{ "Banana" };
 
-	cout << "apple != APPLE is " << (s1 < s2 ? "true" : "false") << endl;
+	cout << "apple != APPLE is " << (s1 != s2 ? "true" : "false") << endl;
 	cout << "name12 > name1234 is " << (s3 > s4 ? "true" : "false") << endl;
 	cout << "Kiwi == APPLE is " << (s5 == s2 ? "true" : "false") << endl;
 	cout << "aapplllee > APPLE is " << (s6 > s2 ? "true" : "false") << endl;
