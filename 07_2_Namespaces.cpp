@@ -19,7 +19,7 @@ While outside it, it will still refer to the original entity.
 
 Namespaces:
 Namespaces allow us to group named entities that otherwise would have global scope into
-narrower scopes, giving them namespace scope. Namespaces can be declared anywhere except 
+narrower scopes, giving them namespace scope. Namespaces can be declared anywhere except
 within any function or data structure definition.
 The syntax to declare a namespace is:
 namespace my_identifier
@@ -68,7 +68,7 @@ int main() {
 	int inner_x{};	// gives a compiler error if not initialized.
 	using namespace first;
 	cout << "y value from namespace 'first' is : " << y << '\n';
-	cout << "x value from namespace 'second' is : " << second::y << '\n';
+	cout << "y value from namespace 'second' is : " << second::y << '\n';
 	cout << "outer_x global automatically initialized variable is : " << outer_x << '\n';
 
 	{
@@ -78,8 +78,8 @@ int main() {
 
 	cout << "x value from namespace 'first' is : " << x << '\n';
 	cout << "x value from namespace 'second' is : " << second::x << '\n';
-	cout << "x value from namespace 'second_2' from within 'second' is : (" 
-		<< second::second_2::x << ") a string type variable." << '\n';
+	cout << "x value from namespace 'second_2' from within 'second' is : ("
+	     << second::second_2::x << ") a string type variable." << '\n';
 
 	return 0;
 }
