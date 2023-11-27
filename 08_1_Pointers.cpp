@@ -304,7 +304,7 @@ printing out some variables which are already declared. */
 	for (int i = 0; i < 3; ++i)			number_vec[i] = i + 10;	// changed
 	for (auto num_vec : number_vec)	cout << num_vec << " , ";	cout << endl;
 
-	for (auto num_vec : number_vec)		num_vec = 99;		// changed
+	for (auto& num_vec : number_vec)		num_vec = 99;		// changed
 	for (auto num_vec : number_vec)	cout << num_vec << " , ";	cout << endl;
 
 	return 0;
