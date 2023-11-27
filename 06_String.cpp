@@ -47,7 +47,7 @@ using namespace std;
 int main() {
 	char letter[]{ 'A', 'B', 'C', '\0'};
 	char first_name1[20]{"Welcome to start"};
-	char first_name2[20]{'W','e','l','c','o','m','e',' ','A','L','L', '!','\n'};
+	char first_name2[20]{'W','e','l','c','o','m','e',' ','A','L','L', '!','\0'};
 	char last_name[20]{};
 	char full_name[50];
 
