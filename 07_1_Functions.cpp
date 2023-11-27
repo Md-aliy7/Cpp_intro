@@ -252,7 +252,7 @@ int main() {
 }
 
 double calc_area_circle(double r) {
-	return pi * r;
+	return pi * pow(r,2);
 }
 
 double cal_volume_cylinder(double radius, double height) {
