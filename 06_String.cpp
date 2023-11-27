@@ -157,12 +157,12 @@ int main() {
 
 	cout << sentence << endl;
 	string sentence1;
-	sentence1 = sentence.substr(0, 4);		// from element 0 count 4 elments to be included in a one substring.
+	sentence1 = sentence.substr(0, 4);		// from element 0 count 4 elements to be included in one substring.
 	cout << sentence1 << endl;
-	cout << sentence.substr(4, 2) << endl;	// from element 4 count 2 elments to be included in a one substring.
-	cout << sentence.substr(7,2) << endl;	// from element 7 count 2 elments to be included in a one substring.
-	cout << sentence.substr(9, 8) << endl;	// from element 9 count 8 elments to be included in a one substring.
-	cout << sentence.substr(18, 9) << endl;	// from element 18 count 9 elments to be included in a one substring.
+	cout << sentence.substr(4, 2) << endl;	// from element 4 count 2 elements to be included in one substring.
+	cout << sentence.substr(7, string::npos) << endl;	// from element 7 count all next elements.
+	cout << sentence.substr(9, 8) << endl;	// from element 9 count 8 elements to be included in one substring.
+	cout << sentence.substr(18, 9) << endl;	// from element 18 count 9 elements to be included in one substring.
 
 	string one_word;
 	cout << "Enter a word to find its position:\n";
