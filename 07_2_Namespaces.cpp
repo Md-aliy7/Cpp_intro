@@ -6,7 +6,7 @@ https://cplusplus.com/doc/tutorial/namespaces/
 /*
 Scopes:
 -) Named entities (such as variables, functions, and compound types) declared outside
-any block has global scope, meaning that its name is valid anywhere in the code.
+any block have global scope, meaning that its name is valid anywhere in the code.
 While an entity declared within a block, such as a function or a selective statement, has
 block scope (known as local variables), and is only visible within the specific block in
 which it is declared, but not outside it.
