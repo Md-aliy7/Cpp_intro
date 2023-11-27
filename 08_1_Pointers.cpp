@@ -218,7 +218,7 @@ int main() {
 	char name_arr[] = "My name is Ali";
 	const char* ptr_arr = name_arr;	// array address is its first element address
 	cout << "pointer " << &ptr_arr << " points to " << *ptr_arr << " or " << name_arr[0] << endl;
-	cout << "The next variable address is " << &(ptr_arr)+1 << endl;
+	cout << "The next variable address is " << &(ptr_arr)+12 << endl;
 	// it seems like the compiler gives sequential memory parts for the workspace variables.
 
 	string name_str = "My name is Ali";
