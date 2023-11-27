@@ -5,7 +5,7 @@ https://cplusplus.com/doc/tutorial/pointers/
 
 /*
 -) The address of a variable can be obtained by preceding its name with an ampersand sign (&), 
-known as address-of operator.
+known as the address-of operator.
 -) The variable that stores the address of another variable is what in C++ is called a pointer.
 By preceding the pointer name with the dereference operator (*), pointers can be used to 
 access the variable they point to directly.
@@ -25,18 +25,18 @@ Only addition and subtraction operations are allowed for pointer arithmetics (se
 
 Pointers can be used to access a variable by its address, and this access may include
 modifying the value pointed. But it is also possible to declare pointers that can access
-the pointed value to read it, but not to modify it. For this, it is enough with
-qualifying the type pointed to by the pointer as const (see examples).
+the pointed value to read it, but not to modify it. For this, it is enough to qualify
+the type pointed to by the pointer as const (see examples).
 
 Pointers to pointers: 
-C++ allows the use of pointers that point to pointers that in its turn,
+C++ allows the use of pointers that point to pointers that in turn,
 point to data (or even to other pointers). The syntax simply requires an asterisk (*) for
 each level of indirection in the declaration of the pointer (see examples).
 
 Void pointers:
--) The void type of pointer is a special type which points to a value that has no type 
+-) The void type of pointer is a special type that points to a value that has no type 
 (and thus also an undetermined length and undetermined dereferencing properties).
--) This gives void pointers a great flexibility, by being able to point to any data type,
+-) This gives void pointers great flexibility, by being able to point to any data type,
 from an integer value or a float to a string of characters.
 -) In exchange, they have a great limitation: the data pointed to by them cannot be directly
 dereferenced (which is logical, since we have no type to dereference to), and for that reason,
