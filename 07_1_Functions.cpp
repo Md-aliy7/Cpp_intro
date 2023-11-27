@@ -1,4 +1,4 @@
-﻿/*
+/*
 Topic 7.1:
 https://cplusplus.com/doc/tutorial/functions/
 https://cplusplus.com/doc/tutorial/functions2/
@@ -29,7 +29,7 @@ a function call, are copied into the formal parameters within another memory loc
 2- (by reference) :
 a) (by reference using a reference) means the parameter is (type + & + identifier).
 b) (by reference using a pointer) means the parameter is (type + * + identifier).
-what is passed is no longer a copy, but the variable itself, and any modification on its corresponding 
+what is passed is no longer a copy, but the variable itself, and any modification on its corresponding
 local variable within the function is reflected in the variables passed as arguments in the call.
 For passing the variables without modification we use const pointer & const reference.
 -) Note: the collection types like strings, vectors, and others have a certain amount of overhead
@@ -63,7 +63,7 @@ Syantax:
 template <template-parameters> function-declaration
 or more specificly:
 template <class SomeType1, class SomeType2, type identifier1>
-SomeType function_name (SomeType1 Param1, SomeType2 Param2) 
+SomeType function_name (SomeType1 Param1, SomeType2 Param2)
 {statements deal with Param1, Param2, and identifier1}
 
 Practice the examples shown below.
@@ -111,7 +111,7 @@ int main() {
 }
 */
 
-const double pi{3.14159};
+const double pi{ 3.14159 };
 
 double calc_area_circle(double);	//prototype
 
@@ -123,7 +123,7 @@ void area_circle() {
 	cout << "\nThe area of a circle with radius " << radius << " is " << calc_area_circle(radius) << endl;
 }
 
-double cal_volume_cylinder(double , double height);	//prototype
+double cal_volume_cylinder(double, double height);	//prototype
 void volume_cylinder();		//prototype
 string say_hello(string);	//prototype
 void sqrt_func(double&);	//prototype
@@ -162,17 +162,17 @@ unsigned long long factorial(unsigned long n) {
 }
 
 // Function template:
-template <class T, class U, int N>
-U squared_multiply(T val1, U val2)
+template <class T, class U, class P>
+U powered_multiply(T val1, U val2, P power)
 {
 	if (val1 == val2) {
-		cout << "x and y are equal\n" << "Their squared multiplication is ";
-		return pow(val1 ^ 2, N);
+		cout << "x and y are equal\n" << "Their multiplication raised to power " << power << " is ";
+		return pow(val1 * val2, power);
 	}
 	else
 	{
-		cout << "x and y are not equal\n" << "Their squared multiplication is ";
-		return pow(val1 * val2, N);
+		cout << "x and y are not equal\n" << "Their multiplication raised to power " << power << " is ";
+		return pow(val1 * val2, power);
 	}
 }
 
@@ -200,7 +200,7 @@ int main() {
 	volume_cylinder();
 	say_hello("Mohamed ALI");
 
-// Argument passed by reference:
+	// Argument passed by reference:
 	double number;
 	cout << "Enter a number to get its squar: ";
 	cin >> number;
@@ -220,7 +220,7 @@ int main() {
 
 	greeting("Mohamed", "Ph.D.");
 
-// Overloaded functions:
+	// Overloaded functions:
 	print(100);
 	print(598.2685);
 	print(274.65F);
@@ -228,11 +228,11 @@ int main() {
 	string s{ "C++ string" };
 	print(s);
 	print("C-style string", s);
-	vector<char> cha{'A','B','C','D','E','F'};
+	vector<char> cha{'A', 'B', 'C', 'D', 'E', 'F'};
 	print(cha);
-	vector<vector<string>> str_vector{ {"First Name: ", "Second Name: ", "Surname: "}, 
-		{"Mohamed", "Abdo ", "ALI"},
-		{"Hesham", "Ahmed ", "Tarek"}
+	vector<vector<string>> str_vector{ {"First Name: ", "Second Name: ", "Surname: "},
+		{ "Mohamed", "Abdo ", "ALI" },
+		{ "Hesham", "Ahmed ", "Tarek" }
 	};
 	print(str_vector, 3, 3);
 
@@ -242,11 +242,30 @@ int main() {
 	cout << "\nYour grade is " << grade << endl;
 	cout << name << endl;
 
-// Function template:
+	// Function template:
 	cout << "The function template call results in:\n";
-	int x = 10; double y = 10.5;
-	double template_func = squared_multiply<int, double, 2>(x, y);
+	double x,y;
+	float power;
+
+	cout << "Enter the value of x:\n";
+	cin >> x;
+	cout << "Enter the value of y:\n";
+	cin >> y;
+	cout << "Enter the power of x*y multiplication:\n";
+	cin >> power;
+
+	double template_func = powered_multiply<int, double, float>(x, y, power);
 	cout << template_func << '\n';
+
+	cout << "Enter the value of x:\n";
+	cin >> x;
+	cout << "Enter the value of y:\n";
+	cin >> y;
+	cout << "Enter the power of x*y multiplication:\n";
+	cin >> power;
+
+	double template_func2 = powered_multiply<float, int, int>(x, y, power);
+	cout << template_func2 << '\n';
 
 	return 0;
 }
@@ -280,7 +299,7 @@ void sqrt_func(double& number) {
 }
 
 void print(int num) {
-	cout << "Printing int: " << num <<endl;
+	cout << "Printing int: " << num << endl;
 }
 void print(double num) {
 	cout << "Printing double: " << num << endl;
