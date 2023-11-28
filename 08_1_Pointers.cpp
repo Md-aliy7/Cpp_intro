@@ -41,7 +41,8 @@ from an integer value or a float to a string of characters.
 -) In exchange, they have a great limitation: the data pointed to by them cannot be directly
 dereferenced (which is logical, since we have no type to dereference to), and for that reason,
 any address in a void pointer needs to be transformed into some other pointer type that points to
-a concrete data type before being dereferenced (see examples).
+a concrete data type before being dereferenced (see examples). Thus, the new pointer knows the number
+of bytes (and bits) it can access and process within the memory.
 
 -) Pointers are meant to point to valid addresses, such as the address of a variable or the
 address of an element in an array.
