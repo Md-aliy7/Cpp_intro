@@ -67,11 +67,11 @@ int main()
     }
 
     try {
-        int* pointer = new int[5585444556];
+        int* pointer = new int[558544455];
         cout << "memory is allocated, press (Y) to deallocate it!\n";
         char release;
         cin >> release;
-        if (release == ('Y' || 'y'))    //OR:         if (release == 'Y' || release == 'y') 
+        if (release == 'Y' || release == 'y') 
         {
             delete[] pointer;
             cout << "memory is deallocated\n";
