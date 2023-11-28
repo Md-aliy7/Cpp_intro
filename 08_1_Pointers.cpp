@@ -12,7 +12,7 @@ access the variable they point to directly.
 
 The reference and dereference operators are thus complementary:
 -) & is the address-of (i.e., reference) operator, and can be read simply as "address of"
--) * is the dereference operator, and can be read as "value pointed to by"
+-) * is the dereference operator, and can be read as "value -in bits- pointed to by"
 
 The declaration of pointers follows this syntax:
 type * ptr_name;
