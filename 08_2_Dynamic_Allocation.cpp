@@ -8,7 +8,7 @@ Dynamic memory allocation in C++ refers to performing memory allocation manually
 If sufficient memory is available, a 'new' operator allocates the memory and returns the address 
 of the newly allocated memory to the pointer variable.
 
-Dynamic memory is allocated using operator new with following syntax:
+Dynamic memory is allocated using the operator 'new' with the following syntax:
 a) for one element of type 'type_x':
 type_x *pointer = new type_x;
 b) to allocate a block(an array) of memory of type 'type_x':
@@ -27,7 +27,7 @@ by any other variable causing a memory leak (memory is not deallocated until the
 Memory leaks are particularly serious issues for programs like daemons and servers
 which by definition never terminate.
 
-For this purpose, we use operator 'delete', whose syntax is:
+For this purpose, we use the operator 'delete', whose syntax is:
 a) delete pointer;
 b) delete[] pointer;
 
@@ -67,7 +67,15 @@ int main()
     }
 
     try {
-         int* pointer = new int[555555665555555555];
+        int* pointer = new int[5585444556];
+        cout << "memory is allocated, press (Y) to deallocate it!\n";
+        char release;
+        cin >> release;
+        if (release == ('Y' || 'y'))    //OR:         if (release == 'Y' || release == 'y') 
+        {
+            delete[] pointer;
+            cout << "memory is deallocated\n";
+        }
     }
     catch (bad_alloc) {
         cout << "Couldn't allocate memory";
