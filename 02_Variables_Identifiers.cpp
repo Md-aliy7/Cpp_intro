@@ -9,7 +9,9 @@ https://cplusplus.com/doc/tutorial/basic_io/	// to be read again.
 A variable is a portion of memory to store a value.
 A valid identifier (valid variable name) is a sequence of one or more letters, digits, or underscore characters (_).
 Spaces, punctuation marks, and symbols cannot be part of an identifier. In no case can they begin with a digit.
-The values of variables are stored somewhere in an unspecified location in the computer memory as zeros and ones.
+The values of variables are stored somewhere in an unspecified location in the computer memory as 
+a specified number of binary digits (zeros and ones).
+NOTE: Converting between variable types can present challenges, particularly when dealing with different bit sizes.
 
 Fundamental data types are basic types implemented directly by the language that represent the basic storage 
 units supported natively by most systems.
