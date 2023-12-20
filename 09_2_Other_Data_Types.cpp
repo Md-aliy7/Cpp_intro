@@ -12,7 +12,7 @@ a) typedef existing_type new_type_name;	// 'typedef' keyword inherited from the 
 b) using new_type_name = existing_type ;
 'using' is more generic than 'typedef' which has certain limitations in the realm of templates.
 
-Once an alias is defined, it can be used in any declaration just like any other valid type:
+Once an alias is defined, it can be used in any declaration just like any other valid type.
 
 -) Unions
 Unions allow one portion of memory to be accessed as different data types.
