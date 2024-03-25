@@ -27,6 +27,7 @@ member_type3 member_name3;
 Each of these members can be of a different data type, but the modification of one of
 the members will affect the value of all of them.
 The exact alignment and order of the members of a union in memory depends on the system.
+Each object of a union type in C++ has its distinct memory allocation.
 
 When unions are members of a class (or structure), they can be declared with no name.
 In this case, their members are directly accessible from objects by their names.
